@@ -9,6 +9,8 @@ import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
 import Users from "./Pages/users/Users";
 import Products from "./Pages/products/Products";
+import Login from "./Pages/login/Login";
+import "./styles/global.scss"
 
 
 function App() {
@@ -23,8 +25,8 @@ function App() {
           <div className="contentContainer">
             <Outlet />
           </div>
-          <Footer />
         </div>
+        <Footer />
       </div>
     )
   };
@@ -41,13 +43,11 @@ function App() {
         },
         {
           path:"/products", element:<Products />
-        }
-        
-
-      ]
-      
-    
-
+        },
+      ],
+    },
+    {
+      path:"/login", element:<Login />
     }
       
     ]);
