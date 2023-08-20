@@ -15,14 +15,12 @@ const TopBox = () => {
                             <span className="email">{user.email}</span>
                         </div>
                     </div>
-
-
+                    <span className="amount">${user.amount}</span>
                 </div>
             ))}
         </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default TopBox
+export default TopBox;
