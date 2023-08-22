@@ -1,11 +1,19 @@
 import './dataTable.scss';
 import Box from '@mui/material/Box';
 
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridToolbar, GridValueGetterParams } from '@mui/x-data-grid';
 
 const DataTable = () => {
   const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 90 },
+    {
+      field:"avater",
+      headerName: "Avater",
+      width: 100,
+      renderCell: (params) => {
+        return <img src={params.row.img || "/noavater.png"} alt="" />
+      }
+    },
     {
       field: 'firstName',
       headerName: 'First name',
@@ -52,6 +60,7 @@ const DataTable = () => {
     <div className="dataTable">
       <Box sx={{ height: 400, width: '100%' }}>
       <DataGrid
+      className="dataGrid"
         rows={rows}
         columns={columns}
         initialState={{
@@ -61,9 +70,18 @@ const DataTable = () => {
             },
           },
         }}
+        slots={{ toolbar: GridToolbar }}
+          slotProps={{
+          toolbar: {
+            showQuickFilter: true,
+            quickFilterProps: { debounceMs: 500 },
+          },
+        }}
         pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
+        disableColumnSelector
+        disableDensitySelector
       />
       </Box>
     </div>
