@@ -1,5 +1,5 @@
 import './users.scss';
-// import DataTable from '../../components/dataTable/DataTable'
+import DataTable from '../../components/dataTable/DataTable'
 
 
 const Users = () => {
@@ -8,9 +8,10 @@ const Users = () => {
       <div className="info">
         <h1>users</h1>
         <button>Add New User</button>
-        
       </div>
-      {/* <DataTable /> */}
+      <div className="table">
+        <DataTable />
+      </div>
     </div>
   )
 }
