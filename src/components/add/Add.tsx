@@ -5,9 +5,17 @@ type Props = {
     slug: string;
     columns:GridColDef[];
     setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-
 }
+
 const Add = (props:Props) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+    
+        //add new item
+        // axios.post(`/api/${slug}s`, {})
+        props.setOpen(false)
+      };
+
   return (
     <div className="add">
         <div className="modal">
