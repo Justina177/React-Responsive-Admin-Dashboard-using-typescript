@@ -1,10 +1,10 @@
-import Single from '../../components/single/Single';
+// import Single from '../../components/single/Single';
 import './user.scss';
 
 const User = () => {
   return (
     <div>
-      <Single />
+      {/* <Single /> */}
     </div>
   )
 }
