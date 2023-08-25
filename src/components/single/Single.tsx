@@ -21,7 +21,7 @@ const Single = (props:Props) => {
         <div className="info">
           <div className="topInfo">
             {props.img && 
-            <img src="https://images.pexels.com/photos/6968548/pexels-photo-6968548.jpeg?auto=compress&cs=tinysrgb&w=400" 
+            <img src={props.img} 
             alt="" />}
             <h1>{props.title}</h1>
             <button>Update</button>
