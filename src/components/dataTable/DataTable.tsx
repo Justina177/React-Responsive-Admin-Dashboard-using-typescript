@@ -22,7 +22,7 @@ const DataTable = (props: Props) => {
       });
 
     },
-    onSucces: () => {
+    onSuccess: () => {
       queryClient.invalidateQueries([`all${props.slug}`]);
     }
   });
